@@ -1,1 +1,0 @@
-int simulate(Cache *,char *);
