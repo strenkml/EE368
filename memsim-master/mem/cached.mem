@@ -1,0 +1,3 @@
+; Memory with a 2048 byte cache.
+(cache (line_size 8) (line_count 256) (associativity 1)
+   (memory (ram (word_size 8) (latency 100))))
