@@ -1,5 +1,5 @@
 @ECHO off
-IF %1 == 5 GOTO TRACE
+IF %1 == 4 GOTO TRACE
 start /B /affinity 1 .\memsim-master\memsim-master\memsim.exe .\memsim-master\memsim-master\spm_memory.txt %1> spmLog.txt 2>nul
 start /B /affinity 4 .\memsim-master\memsim-master\memsim.exe .\memsim-master\memsim-master\memory.txt %1> cacheLog.txt 2>nul
 GOTO DONE
