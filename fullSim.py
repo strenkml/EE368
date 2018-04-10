@@ -11,7 +11,7 @@ elif int(simType) == 2:
 elif int(simType) == 3:
     os.system("fullSim.bat stride")
 elif int(simType) == 4:
-    os.system("fullSim.bat 5")
+    os.system("fullSim.bat 4")
 else:
     print("You did not chose an appropriate number. Please try 1, 2, 3, or 4\n")
     goodInput = False
