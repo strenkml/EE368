@@ -8,4 +8,3 @@ start /B /affinity 1 .\memsim-master\memsim-master\memsim.exe .\memsim-master\me
 start /B /affinity 4 .\memsim-master\memsim-master\memsim.exe .\memsim-master\memsim-master\memory.txt trace file="memsim-master\memsim-master\trace.txt"> cacheLog.txt 2>nul
 GOTO DONE
 :DONE
-::
