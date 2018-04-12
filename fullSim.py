@@ -32,10 +32,3 @@ if goodInput:
     f = open('cacheLog.txt','r')
     print (f.read())
     f.close()
-
-
-
-
-
-
-
