@@ -1,10 +1,11 @@
 @ECHO off
 IF %1 == 4 GOTO TRACE
-start /B /affinity 1 .\memsim-master\memsim-master\memsim.exe .\memsim-master\memsim-master\spm_memory.txt %1> spmLog.txt 2>nul
-start /B /affinity 4 .\memsim-master\memsim-master\memsim.exe .\memsim-master\memsim-master\memory.txt %1> cacheLog.txt 2>nul
+start /B /affinity 1 memsim.exe spm_memory.txt %1> ..\Results\tempSpmLog.txt 2>..\Results\spmError.txt
+start /B /affinity 4 memsim.exe cache_memory.txt %1> ..\Results\tempCacheLog.txt 2>..\Results\cacheError.txt
 GOTO DONE
 :TRACE
-start /B /affinity 1 .\memsim-master\memsim-master\memsim.exe .\memsim-master\memsim-master\spm_memory.txt trace file="memsim-master\memsim-master\trace.txt"> spmLog.txt 2>nul
-start /B /affinity 4 .\memsim-master\memsim-master\memsim.exe .\memsim-master\memsim-master\memory.txt trace file="memsim-master\memsim-master\trace.txt"> cacheLog.txt 2>nul
+start /B /affinity 1 memsim.exe spm_memory.txt trace file="trace.txt"> ..\Results\tempSpmLog.txt 2>..\Results\spmError.txt
+start /B /affinity 4 memsim.exe cache_memory.txt trace file="trace.txt"> ..\Results\tempCacheLog.txt 2>..\Results\cacheError.txt
 GOTO DONE
 :DONE
+::
