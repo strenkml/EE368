@@ -1,0 +1,17 @@
+;
+; Example memory configuration.
+;
+(dup
+   (stats
+      (prefetch (stride 0)
+         (memory
+            (spm (size 32) (latency 1)
+               (memory
+                  (ram (latency 100))
+               )
+            )
+         )
+      )
+   )
+   (ram (latency 50))
+)
